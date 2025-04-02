@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sign in - Reach Social</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<style>
+    .loginBtn {
+        background-color: #9E30FF !important;
+        cursor: pointer;
+    }
+
+    .loginBtn:hover {
+        background-color: #811ED7 !important;
+    }
+
+    /* text-indigo-200 */
+    .login-arrow {
+        color: #dfbaff;
+    }
+
+    .login-type-btn {
+        background-color: #6766ff !important;
+    }
+
+    .login-type-btn:hover {
+        background-color: #5959fd !important;
+    }
+
+    .login-type-arrow {
+        color: #c3c3f8;
+    }
+</style>
+
+<body class="font-inter antialiased bg-white text-gray-800 tracking-tight">
+    <main class="flex">
+
+        <!-- Content -->
+        <div class="min-h-screen w-full lg:w-1/2">
+
+            <div class="h-full">
+
+                <div class="h-full w-full max-w-md px-6 mx-auto flex flex-col after:mt-auto after:flex-1">
+
+                    <!-- Site header -->
+                    <header class="flex-1 flex mb-auto">
+                        <div class="flex items-center justify-between h-16 md:h-20">
+                            <!-- Logo -->
+                            <a class="block group" href="/" aria-label="Reach Social">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M18.2955 13.5952C18.8579 12.3754 19.1717 11.0172 19.1717 9.58584C19.1717 4.29173 14.88 0 9.58584 0C4.29173 0 0 4.29173 0 9.58584C0 11.0172 0.313737 12.3754 0.876197 13.5952C2.91325 11.3858 6.05765 9.96927 9.58584 9.96927C13.114 9.96927 16.2584 11.3858 18.2955 13.5952Z"
+                                        fill="#9E30FF" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M13.5952 30.9488C12.3754 31.5112 11.0172 31.825 9.58584 31.825C4.29173 31.825 -6.43919e-07 27.5332 -4.1482e-07 22.2391C-1.85721e-07 16.945 4.29173 12.6533 9.58584 12.6533C11.0172 12.6533 12.3754 12.967 13.5952 13.5295C11.3858 15.5665 9.96927 18.7109 9.96927 22.2391C9.96927 25.7673 11.3858 28.9117 13.5952 30.9488Z"
+                                        fill="#9E30FF" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M30.9488 18.4048C31.5112 19.6246 31.825 20.9828 31.825 22.4142C31.825 27.7083 27.5332 32 22.2391 32C16.945 32 12.6533 27.7083 12.6533 22.4142C12.6533 20.9828 12.967 19.6246 13.5295 18.4048C15.5665 20.6142 18.7109 22.0307 22.2391 22.0307C25.7673 22.0307 28.9117 20.6142 30.9488 18.4048Z"
+                                        fill="#9E30FF" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M18.4048 0.876209C19.6246 0.313749 20.9828 1.18661e-05 22.4142 1.18035e-05C27.7083 1.15721e-05 32 4.29174 32 9.58585C32 14.88 27.7083 19.1717 22.4142 19.1717C20.9828 19.1717 19.6246 18.858 18.4048 18.2955C20.6142 16.2584 22.0307 13.114 22.0307 9.58585C22.0307 6.05766 20.6142 2.91327 18.4048 0.876209Z"
+                                        fill="#9E30FF" />
+                                </svg>
+
+                            </a>
+                        </div>
+                    </header>
+
+                    <!-- Login Panels -->
+                    <div class="flex-1 py-8" id="user_login" style="display: block;">
+
+                        <div class="mb-10">
+                            <h1 class="text-4xl font-extrabold font-inter mb-2">Sign In</h1>
+                            <div class="text-gray-500">Sign in to your Reach Social account as a user.</div>
+                        </div>
+
+                        <!-- Form -->
+                        <form action="/login" method="POST">
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium mb-1" for="email">Email</label>
+                                    <input id="email" class="form-input w-full" type="email" autofill="off"
+                                        autocomplete="off" required />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-1" for="password">Password</label>
+                                    <input id="password" class="form-input w-full" type="password" required />
+                                </div>
+                                <input type="hidden" name="role" value="user">
+                            </div>
+                            <div class="mt-6">
+                                <button type="submit" class="loginBtn btn w-full text-white shadow-xs group">
+                                    Login <span
+                                        class="tracking-normal login-arrow group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Divider -->
+                        <div class="flex items-center my-6">
+                            <div class="border-t border-gray-200 grow mr-3" aria-hidden="true"></div>
+                            <div class="text-sm text-gray-500 italic">Or</div>
+                            <div class="border-t border-gray-200 grow ml-3" aria-hidden="true"></div>
+                        </div>
+
+                        <!-- Login Type -->
+                        <button type="button" onclick="loginTypeSelector()"
+                            class="btn text-sm text-white login-type-btn w-full relative flex after:flex-1 group">
+                            <div class="flex-1 flex items-center">
+
+                            </div>
+                            <span class="flex-auto pl-3">
+                                Sign in as a business
+                                <span
+                                    class="inline-flex tracking-normal login-type-arrow group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                            </span>
+                        </button>
+
+                    </div>
+
+                    <div class="flex-1 py-8" id="company_login" style="display: none;">
+
+                        <div class="mb-10">
+                            <h1 class="text-4xl font-extrabold font-inter mb-2">Sign In</h1>
+                            <div class="text-gray-500">Sign in to your Reach Social account as a business.</div>
+                        </div>
+
+                        <!-- Form -->
+                        <form action="/login" method="POST">
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium mb-1" for="email">Email</label>
+                                    <input id="email" class="form-input w-full" type="email" autofill="off"
+                                        autocomplete="off" required />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-1" for="password">Password</label>
+                                    <input id="password" class="form-input w-full" type="password" required />
+                                </div>
+                                <input type="hidden" name="role" value="company">
+                            </div>
+                            <div class="mt-6">
+                                <button type="submit" class="loginBtn btn w-full text-white shadow-xs group">
+                                    Login <span
+                                        class="tracking-normal login-arrow group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Divider -->
+                        <div class="flex items-center my-6">
+                            <div class="border-t border-gray-200 grow mr-3" aria-hidden="true"></div>
+                            <div class="text-sm text-gray-500 italic">Or</div>
+                            <div class="border-t border-gray-200 grow ml-3" aria-hidden="true"></div>
+                        </div>
+
+                        <!-- Login Type -->
+                        <button type="button" onclick="loginTypeSelector()"
+                            class="btn text-sm text-white login-type-btn w-full relative flex after:flex-1 group">
+                            <div class="flex-1 flex items-center">
+
+                            </div>
+                            <span class="flex-auto pl-3">
+                                Sign in as a user
+                                <span
+                                    class="inline-flex tracking-normal login-type-arrow group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                            </span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right side -->
+        <div class="fixed right-0 top-0 bottom-0 hidden lg:block lg:w-1/2 overflow-hidden" aria-hidden="true">
+
+            <!-- Bg -->
+            <div class="absolute inset-0 bg-linear-to-b from-indigo-100 to-white pointer-events-none -z-10"
+                aria-hidden="true"></div>
+
+            <!-- Illustration -->
+            <div class="hidden md:block absolute right-0 pointer-events-none -z-10" aria-hidden="true">
+                <img src="./images/auth-illustration.svg" class="max-w-none" width="1440" height="900"
+                    alt="Page Illustration" />
+            </div>
+
+            <!-- Quotes -->
+            <div class="absolute inset-0 flex flex-col justify-center">
+                <div class="px-5 sm:px-6">
+                    <div class="w-full max-w-xl mx-auto">
+                        <div class="space-y-3 group">
+                            <!-- Testimonial -->
+                            <div
+                                class="p-4 bg-sky-50 border border-sky-200 rounded-xl opacity-30 hover:opacity-100 transition duration-150 ease-in-out">
+                                <div class="flex items-center space-x-5">
+                                    <div class="relative shrink-0">
+                                        <img class="rounded-full" src="./images/testimonial-auth-01.jpg" width="88"
+                                            height="88" alt="Testimonial 01" />
+                                        <svg class="absolute top-0 right-0 fill-indigo-400" width="26" height="17"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M0 16.026h8.092l6.888-16h-4.592L0 16.026Zm11.02 0h8.092L26 .026h-4.65l-10.33 16Z" />
+                                        </svg>
+                                    </div>
+                                    <figure>
+                                        <blockquote class="font-bold m-0 pb-1">
+                                            <p>I got an offer three weeks after I applied via JobBoard. I have never
+                                                been happier in my career life.</p>
+                                        </blockquote>
+                                        <figcaption class="text-sm font-medium">Lisa Smith, developer at <a
+                                                class="text-sky-500 hover:underline" href="#0">AppyYou</a></figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <!-- Testimonial -->
+                            <div
+                                class="p-4 bg-sky-50 border border-sky-200 rounded-xl hover:opacity-100 transition duration-150 ease-in-out">
+                                <div class="flex items-center space-x-5">
+                                    <div class="relative shrink-0">
+                                        <img class="rounded-full" src="./images/testimonial-auth-02.jpg" width="88"
+                                            height="88" alt="Testimonial 02" />
+                                        <svg class="absolute top-0 right-0 fill-indigo-400" width="26" height="17"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M0 16.026h8.092l6.888-16h-4.592L0 16.026Zm11.02 0h8.092L26 .026h-4.65l-10.33 16Z" />
+                                        </svg>
+                                    </div>
+                                    <figure>
+                                        <blockquote class="font-bold m-0 pb-1">
+                                            <p>I got an offer three weeks after I applied via JobBoard. I have never
+                                                been happier in my career life.</p>
+                                        </blockquote>
+                                        <figcaption class="text-sm font-medium">Mark Mills, developer at <a
+                                                class="text-sky-500 hover:underline" href="#0">App.com</a></figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <!-- Testimonial -->
+                            <div
+                                class="p-4 bg-sky-50 border border-sky-200 rounded-xl opacity-30 hover:opacity-100 transition duration-150 ease-in-out">
+                                <div class="flex items-center space-x-5">
+                                    <div class="relative shrink-0">
+                                        <img class="rounded-full" src="./images/testimonial-auth-03.jpg" width="88"
+                                            height="88" alt="Testimonial 03" />
+                                        <svg class="absolute top-0 right-0 fill-indigo-400" width="26" height="17"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M0 16.026h8.092l6.888-16h-4.592L0 16.026Zm11.02 0h8.092L26 .026h-4.65l-10.33 16Z" />
+                                        </svg>
+                                    </div>
+                                    <figure>
+                                        <blockquote class="font-bold m-0 pb-1">
+                                            <p>I got an offer three weeks after I applied via JobBoard. I have never
+                                                been happier in my career life.</p>
+                                        </blockquote>
+                                        <figcaption class="text-sm font-medium">Lisa Smith, developer at <a
+                                                class="text-sky-500 hover:underline" href="#0">AppyYou</a></figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+</body>
+<script>
+    const userLogin = document.getElementById("user_login");
+    const companyLogin = document.getElementById("company_login");
+
+    function loginTypeSelector() {
+        if (userLogin.style.display === "none") {
+            // If user login is hidden, show it and hide company login
+            userLogin.style.display = "block";
+            companyLogin.style.display = "none";
+        } else {
+            // If user login is visible, hide it and show company login
+            companyLogin.style.display = "block";
+            userLogin.style.display = "none";
+        }
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const loginType = urlParams.get("type");
+
+    if (loginType === "business") {
+        companyLogin.style.display = "block";
+        userLogin.style.display = "none";
+    } else {
+        userLogin.style.display = "block";
+        companyLogin.style.display = "none";
+    }
+</script>
+
+</html>
